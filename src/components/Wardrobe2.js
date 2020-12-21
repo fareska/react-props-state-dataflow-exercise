@@ -2,6 +2,8 @@ import Article from "./Article";
 import React, { Component } from 'react';
 
 class Wardrobe2 extends Component {
+  
+
   render() {
     let wardrobe = [
       { type: "shirt", color: "red", size: "Medium" },
@@ -11,8 +13,11 @@ class Wardrobe2 extends Component {
       { type: "accessory", color: "lilac", size: "" },
     ]
 
-    return
-    {/* your code here */ }
+    return(
+      <div>
+        {wardrobe.filter(w=> w.color='blue').map(w=> <Article key={w.type+w.color+w.size} info={w} />)}
+      </div>
+    )
 
   }
 }

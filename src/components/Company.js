@@ -3,7 +3,12 @@ import SubCompany from './SubCompany'
 
 class Company extends Component {
   render() {
-    return {/* your code here */ }
+    
+    let companyName = this.props.name
+    return(
+        <SubCompany name={companyName} />
+    ) 
+      
 
   }
 }

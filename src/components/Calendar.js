@@ -4,7 +4,7 @@ class Calendar extends Component {
   render() {
     return (
       <div id="calendar">
-        {/* your code here */}
+        {this.props.reservations.map(r=><p>{r.name + ' has a reservation on ' + r.day + ',@ ' +r.time}</p>)}
 
       </div>
     )
